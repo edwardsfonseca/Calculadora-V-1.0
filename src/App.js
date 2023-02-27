@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (btn.id === "=") {
-      display.value = + display.value; // tambien puedes usar la funcion eval para evaluar el valor :D
+      display.value=eval(display.value); // tambien puedes usar la funcion eval para evaluar el valor :D
     } else if (btn.id === "ac") {
       display.value = "";
     } else if (btn.id == "de") {
