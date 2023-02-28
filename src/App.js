@@ -1,21 +1,7 @@
 import './App.css';
 import React,{useState} from "react";
 function App() {
- /*  const display = document.querySelector("#display");
-  const buttons = document.querySelectorAll("button");
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (btn.id == "=") {
-        display.value = eval(display.value); // tambien puedes usar la funcion eval para evaluar el valor :D
-      } else if (btn.id == "ac") {
-        display.value = "";
-      } else if (btn.id == "de") {
-        display.value = display.value.slice(0, -1);
-      } else {
-        display.value += btn.id;
-      }
-    })
-  }); */
+ 
   const [num, setNum] = useState(0);
   const [oldnum, setOldNum] = useState(0);
   const [operator, setOperator] = useState();
@@ -61,9 +47,6 @@ function App() {
     } else if (operator === "x") {
       setNum(parseFloat(oldnum) * parseFloat(num));
     } else if (operator === "-") {
-        console.log(oldnum)
-        console.log(num)
-        console.log(oldnum-num)
       setNum(parseFloat(oldnum) - parseFloat(num));
     } else if (operator === "+") {
       setNum(parseFloat(oldnum) + parseFloat(num));
@@ -94,7 +77,7 @@ function App() {
         <button id='3'onClick={inputNum} value={3} >3</button>
         <button id='+' className='operador'onClick={operatorHandler} value={"+"}>+</button>
         <br />
-        <button id='00'onClick={inputNum} value={","} >,</button> {/* arreglar problema  */}
+        <button id='00'onClick={inputNum} value={"."} >,</button> {/* arreglar problema  */}
         <button id='0'onClick={inputNum} value={0} >0</button>
         <button id='=' className='igual'onClick={calculate} >=</button>
         <br />
